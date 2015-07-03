@@ -22,7 +22,7 @@ public class player_movement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		anim.SetFloat ("Speed", Mathf.Abs (Input.GetAxis ("Horizontal")));
+		anim.SetFloat ("Speed", Mathf.Abs (rb2d.velocity.x));
 		anim.SetBool ("isGrounded", isGrounded);
 
 		
