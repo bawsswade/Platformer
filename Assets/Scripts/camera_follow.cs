@@ -22,7 +22,18 @@ public class camera_follow : MonoBehaviour {
 
 		transform.position = new Vector3 (xPos, yPos, transform.position.z);
 
-
+		if(transform.position.x < minCamPos.x)
+		{
+			transform.position = new Vector3(minCamPos.x, transform.position.y, transform.position.z);
+		}
+		if(transform.position.x > maxCamPos.x)
+		{
+			transform.position = new Vector3(maxCamPos.x, transform.position.y, transform.position.z);
+		}
+		if(transform.position.y < minCamPos.y)
+		{
+			transform.position = new Vector3(transform.position.x, minCamPos.y, transform.position.z);
+		}
 	}
 
 	public void SetMinPos()

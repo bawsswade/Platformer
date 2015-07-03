@@ -33,6 +33,11 @@ public class player_movement : MonoBehaviour {
 		{
 			transform.localScale = new Vector3(0.25f,.25f,1);
 		}
+
+		if(transform.position.y < -1)
+		{
+			transform.position = new Vector3(-1.5f, .5f, 0);
+		}
 	}
 
 	// Called once every frame of rigid body
