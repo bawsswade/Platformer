@@ -7,6 +7,8 @@ public class camera_follow : MonoBehaviour {
 	public float smoothOffset = .05f;
 
 	private Vector2 vel;
+	public Vector3 minCamPos;
+	public Vector3 maxCamPos;
 
 	// Use this for initialization
 	void Start () {
@@ -19,5 +21,17 @@ public class camera_follow : MonoBehaviour {
 		float yPos = Mathf.SmoothDamp (transform.position.y, player.transform.position	.y, ref vel.y, smoothOffset);
 
 		transform.position = new Vector3 (xPos, yPos, transform.position.z);
+
+
+	}
+
+	public void SetMinPos()
+	{
+		minCamPos = transform.position;
+	}
+
+	public void SetMaxPos()
+	{
+		maxCamPos = transform.position;
 	}
 }
