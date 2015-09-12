@@ -54,7 +54,7 @@ public class player_movement : MonoBehaviour {
 		}
 
 
-		if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true) {
+		if (Input.GetKeyDown(KeyCode.Space) && isGrounded ) {
 			//rb2d.velocity = new Vector2(rb2d.velocity.x,  jumpStr);
 			rb2d.AddForce(Vector2.up * jumpStr);
 		}
